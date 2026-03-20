@@ -2,8 +2,9 @@ import time
 import random
 start_time = time.time()
 def insertionSort(element):
+    #[65,2,3,5,10]
     for i in range(1, len(element)):
-        anchor = element[i]
+        anchor = element[i] 
         j = i-1
         while j >= 0 and anchor < element[j]:
             element[j + 1] = element[j]
