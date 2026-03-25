@@ -10,27 +10,29 @@ def insertionSort(element):
             element[j + 1] = element[j]
             j = j -1
         element[j+1] = anchor
+    return element
 
-def run_median(stream):
-    arr = []
+# def run_median(stream):
+#     arr = []
 
-    for i in stream:
-        arr.append(i)
-        insertionSort(arr)
+#     for i in stream:
+#         arr.append(i)
+#         insertionSort(arr)
 
-        n = len(arr)
-        if n % 2 == 1:
-            median = arr[n // 2]
-        else:
-            median = (arr[n // 2] + arr[n // 2 - 1]) / 2
-        print(median)
+#         n = len(arr)
+#         if n % 2 == 1:
+#             median = arr[n // 2]
+#         else:
+#             median = (arr[n // 2] + arr[n // 2 - 1]) / 2
+#         print(median)
 
 
 
 needToSorted = [random.randint(1, 10000) for _ in range(10000)] 
 # insertionSort(needToSorted)
-run_median(needToSorted)
-print(needToSorted)
+# run_median(needToSorted)
+
+print(insertionSort(needToSorted)) #4,8 detik
 
 end_time = time.time()
 duration = end_time - start_time
